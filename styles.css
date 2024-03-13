@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Aquí empieza el diseño del contenido de mi página web. Primero le agrego a continuación los valores del texto de mi receta: cuerpo, título principal, entre otros valores */
+
+body {
+  margin-left: 230px;
+  margin-right: 230px;
+  text-anchor: middle;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Geneva, Tahoma, sans-serif, Courier, sans-serif;
+  font-size: 21px;
+  background-color: #fbb511;
+  color: #000;
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 2rem;
+  margin-left: 60px;
+}
+
+h1 {
+  display: flex;
+  font-family: Tahoma, sans-serif;
+  font-size: 90px;
+  margin-left: 0px;
+  margin-right: 300px;
+  margin-bottom: 1;
+  font-weight: bold;
+}
+
+p {
+  padding-right: 13rem;
+  }
+
+.p2 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgba(153, 96, 180, 0.799);
+  border-radius: 400px;
+  background-size: 3px;
+}
+
+/* No quiero que la barra del scroll se vea en la página porque considero que altera el diseño de mi página y no agrega ningún valor visual para lo que quiero mostrar, así que disminuí su tamaño */
+
+body::-webkit-scrollbar {
+width: 8px;
+}
+
+/* En este punto agrego los valores del diseño del botón "¡A Cocinar!" para que tenga un efecto hover al pasar el cursos encima y hacer clic */
+
+.boton {
+  border: 3px solid #fafafb00; /*anchura, estilo y color borde*/
+padding: 15px; /*espacio alrededor texto*/
+background-color: rgba(170, 0, 248, 0.532); /*color botón*/
+color: #000000; /*color texto*/
+text-decoration: none; /*decoración texto*/
+text-transform: uppercase; /*capitalización texto*/
+font-family: Tahoma, Verdana, sans-serif; /*tipografía texto*/
+border-radius: 70px; /*bordes redondos*/
+text-align: left;
+position:absolute;top: 20%;
+margin-left: 880px;
+}
+
+.boton_inicio {
+border: 3px solid #fafafb; /*anchura, estilo y color borde*/
+padding: 15px; /*espacio alrededor texto*/
+background-color: #ffffff; /*color botón*/
+color: #000000; /*color texto*/
+text-decoration: none; /*decoración texto*/
+text-transform: uppercase; /*capitalización texto*/
+font-family: Tahoma, Verdana, sans-serif; /*tipografía texto*/
+border-radius: 70px; /*bordes redondos*/
+font-size: 30px;
+}
+
+.boton_back {
+border: 2px solid #fafafb00; /*anchura, estilo y color borde*/
+padding: 10px; /*espacio alrededor texto*/
+background-color: #ffffff; /*color botón*/
+color: #000000; /*color texto*/
+padding-bottom:-5px;
+cursor: pointer;
+margin-top: -80px;
+text-decoration: none; /*decoración texto*/
+text-transform: uppercase; /*capitalización texto*/
+font-family: Tahoma, Verdana, sans-serif; /*tipografía texto*/
+border-radius: 30px; /*bordes redondos*/
+}
+
+/* Aquí va el diseño de la navegación del botón */
+
+nav a[aria-current='page'] {
+  color: rgb(255, 255, 255);
+  background-color: #ed991300;
+  animation: cursor none forwards 5s;
+}
+
+/* Efecto hover. Este código CSS lo busqué y copié, cambié los valores de color y tiempo de transición. Básicamente quería darle movimiento a la página de inicio y que el botón sea una invitación al usuario a ver de qué trata el recetario*/
+
+a {
+  background-color: rgb(246, 246, 246);
+  transition: background-color 0.5s;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+}
+  
+a {
+  background-color: rgb(246, 246, 246);
+  transition: background-color 0.5s;
+}
+
+a:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+/* Para alinear mis imágenes al centro de la página les agregué una clase con margen izquierdo ya que no me dejaba ponerlas en posició-centro*/
+
+.image {
+  margin-left: 350px;  
+ }
+
+/* Vi un efecto de rotación de texto que necesitaba poner para poder jugar con la bienvenida a mi recetario editorial dirigido a una editora, un editor y un editore, me pareció que funcionaba perfecto y le daba el mivimiento que quería a mi página. El código lo tuve que recrear tal cual de un tutorial en YouTube que mostraba cómo hacerlo. Le cambié los valores acorde a mi página*/
+
+h2 .boton {
+  font-size: 30px;
+}
+
+/* Aquí empieza el diseño de la animación*/
+
+.list {
+  margin-left: 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: 65px;
+  margin-right: 70px;
+  margin-left: 20px;
+}
+.item {
+  position: absolute;
+  animation: roll 6s ease infinite backwards;
+}
+
+/* Esta es la configuración de cada item de texto que va a rotar*/
+
+.item:nth-child(1) {
+  animation-delay: 0s;
+  opacity: 0;
+  color: rgb(169, 0, 248);
+}
+
+.item:nth-child(2) {
+  animation-delay: 2s;
+  opacity: 0;
+  color: rgb(35, 92, 205);
+}
+
+.item:nth-child(3) {
+  animation-delay: 4s;
+  opacity: 0;
+  color: rgb(255, 255, 255);
+}
+
+@keyframes roll{ 
+  0% {
+  opacity: 0;
+  transform: translate3d(0,-70%,0);
+  }
+
+  2.5%, 25% {
+  opacity: 1;
+  transform: translateZ(0);
+  }
+
+  27.5%, 100% {
+  opacity: 0;
+  transform: translate3d(0,70%,0);
+  }
+
+  /* Hasta aquí va el diseño de la página */
+}
